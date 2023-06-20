@@ -1,0 +1,40 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header-layout {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+  align-items: center;
+
+  &__title {
+    font-size: 25px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1b5479;
+    transition: font-size 0.4s ease;
+  }
+  &__title:hover {
+    font-size: 35px;
+    color: white;
+  }
+}
+.img__nav {
+  height: 80px;
+  width: 80px;
+  transition: 0.4s linear;
+
+  &:hover {
+    height: 120px;
+    width: 120px;
+  }
+}

@@ -1,0 +1,29 @@
+<app-paginator (changePagination)="changePagination($event)"></app-paginator>
+<div class="wrapper">
+  <ng-container *ngIf="(breeds | async) as breeds">
+    <mat-card class="card-wrapper">
+      <multiselect-autocomplete
+        placeholder="Select breeds here ..."
+        [key]="'options'"
+        [data]="breeds"
+        (result)="selectChange($event)">
+      </multiselect-autocomplete>
+    </mat-card>
+
+    <mat-card class="card-wrapper">
+      <ng-container *ngIf="cardValue.options.length === 0">
+        No breeds
+      </ng-container>
+      <ng-container *ngIf="cardValue.options.length > 0">
+        <div *ngFor="let option of cardValue.options">
+          {{ option.name }}
+        </div>
+      </ng-container>
+    </mat-card>
+  </ng-container>
+</div>
+
+<ng-container *ngIf="cards.length">
+  <app-card *ngFor="let card of cards" [card]="card"></app-card>
+</ng-container>
+

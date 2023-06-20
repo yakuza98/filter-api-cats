@@ -1,0 +1,7 @@
+<mat-card class="card-cat">
+    <mat-card-header>
+      <mat-card-title>{{card.breeds[0]?.name || 'No name'}}</mat-card-title>
+      <mat-card-subtitle>{{card.breeds[0]?.description || 'No description'}}</mat-card-subtitle>
+    </mat-card-header>
+  <img mat-card-image [src]="card.url" alt="Breed of cat">
+</mat-card>

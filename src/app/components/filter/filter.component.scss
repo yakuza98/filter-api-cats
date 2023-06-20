@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+
+  .card-wrapper {
+    background-color: bisque;
+    min-width: 400px;
+    margin-bottom: 1em;
+  }
+}
